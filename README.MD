@@ -54,7 +54,6 @@ $cd nginx-docker-master
 ```
 
 ##Building our own docker image from a Dockerfile inorder to install nginx server.
-
 ##Git repo [https://github.com/Lforlinux/nginx-docker](https://github.com/Lforlinux/nginx-docker/).
 
 #Dockerfile
@@ -108,7 +107,6 @@ $localhost:80
 ```
 
 #Installing nginx server by Docker-compose.
-
 ##Git repo [https://github.com/Lforlinux/nginx-docker-compose](https://github.com/Lforlinux/nginx-docker-compose/).
 
 #Stop the previous container
