@@ -1,5 +1,5 @@
 
-#Vagrant Virtual box creation. 
+# Vagrant Virtual box creation. 
 
 Download this Vagrantfile on $HOME folder.
 
@@ -13,13 +13,13 @@ $ Vagrant.configure("2") do |config|
 end
  
 ```
-#Vagrant up
+# Vagrant up
 
 ```bash
 Vagrant up adp 
 ```
 
-#select the network connection method 
+# Select the network connection method 
 
 ```bash
 ==> adp: Available bridged network interfaces:
@@ -32,17 +32,17 @@ Vagrant up adp
 ```
 
 
-#Establish SSH connection 
+# Establish SSH connection 
 ```bash
 $ ssh vagrant adp 
 ```
 
-#Get sudo access on terminal 
+# Sudo access on terminal 
 ```bash
 $ sudo bash
 ```
 
-##Run the repo-sync.sh in-order to fetch the GIT repositary on location machine. 
+## Run the repo-sync.sh in-order to fetch the GIT repositary on location machine. 
 
 ```bash
 $bash repo-sync.sh
@@ -53,11 +53,11 @@ $bash repo-sync.sh
 $cd nginx-docker-master
 ```
 
-##Building our own docker image from a Dockerfile inorder to install nginx server.
+## Building our own docker image from a Dockerfile inorder to install nginx server.
 
-##Git repo [https://github.com/Lforlinux/nginx-docker](https://github.com/Lforlinux/nginx-docker/).
+## Git repo [https://github.com/Lforlinux/nginx-docker](https://github.com/Lforlinux/nginx-docker/).
 
-#Dockerfile
+# Dockerfile
 ```bash
 #Set the base image to centos
 FROM centos:7
@@ -83,18 +83,18 @@ EXPOSE 80/tcp
 CMD ["nginx", "-g daemon off;"]
 ```
 
-#Dockerbuild 
+# Dockerbuild 
 
 ```bash
 $docker build -t centos7/nginx .
 ````
 
-#Running nginx webserver on docker container by exposing port 80
+# Running nginx webserver on docker container by exposing port 80
 
 ```bash
 $docker run --name nginx-adp-v1.0 -dit -p 80:80 centos7/nginx
 
-#confirm the process
+# confirm the process
 
 ```bash
 $docker ps
@@ -102,16 +102,16 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 f2b6e1eea261        centos7/nginx       "nginx '-g daemon off"   3 seconds ago       Up 2 seconds        0.0.0.0:80->80/tcp   nginx-adp-v1.1
 ```
 
-##Access the web server from the browser by navigating to
+## Access the web server from the browser by navigating to
 ```bash
 $http://localhost:80
 ```
 
-#Installing nginx server by Docker-compose.
+# Installing nginx server by Docker-compose.
 
-#Git repo [https://github.com/Lforlinux/nginx-docker-compose](https://github.com/Lforlinux/nginx-docker-compose/).
+# Git repo [https://github.com/Lforlinux/nginx-docker-compose](https://github.com/Lforlinux/nginx-docker-compose/).
 
-#Stop the previous container
+# Stop the previous container
 ```bash
 docker stop container-id
 ```
@@ -121,7 +121,7 @@ cd nginx-docker-compose
 ```
 
 ```bash
-#Docker-composer File
+# Docker-composer File
 $cat docker-compose.yml
 
 version: "2"
@@ -141,7 +141,7 @@ services:
 
 ```
 
-#Docker-compose
+# Docker-compose
 ```bash
 $docker-compose up -d
 Starting nginxdockercomposemaster_nginx_1 ... 
