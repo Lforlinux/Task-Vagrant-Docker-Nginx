@@ -8,22 +8,11 @@ $ Vagrant.configure("2") do |config|
   config.vm.box = "lekshmin/centos7-docker"
   config.vm.box_version = "1.1.1"
   config.vm.network "public_network"
-  config.vm.define "docker" do |docker|
+  config.vm.define "adp" do |adp|
   end
 end
  
 ```
-
-##Named definition here docker is just a name 
-```bash
-$config.vm.define "docker" do |docker|
- end
-```
-##Network selection 
-```bash
-$config.vm.network "public_network"
-```
-
 #Vagrant up
 
 ```bash
@@ -33,20 +22,20 @@ Vagrant up adp
 #select the network connection method 
 
 ```bash
-==> terra: Available bridged network interfaces:
+==> adp: Available bridged network interfaces:
 1) wlan0
 2) docker0
 3) eth0
-==> terra: When choosing an interface, it is usually the one that is
-==> terra: being used to connect to the internet.
-    terra: Which interface should the network bridge to? 1
+==> adp: When choosing an interface, it is usually the one that is
+==> adp: being used to connect to the internet.
+    adp: Which interface should the network bridge to? 1
 ```
 
 
 #Establish SSH connection 
 ```bash
 $ ssh vagrant adp 
-`
+```
 
 #Get sudo access on terminal 
 ```bash
@@ -65,6 +54,7 @@ $cd nginx-docker-master
 ```
 
 ##Building our own docker image from a Dockerfile inorder to install nginx server
+
 #Dockerfile
 ```bash
 #Set the base image to centos
@@ -116,13 +106,17 @@ $localhost:80
 ```
 
 #Installing nginx server by Docker-compose 
+
+#Stop the previous container
 ```bash
 docker stop container-id
 ```
 
 ```bash
 cd nginx-docker-compose
+```
 
+```bash
 #Docker-composer File
 $cat docker-compose.yml
 
