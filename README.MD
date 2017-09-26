@@ -104,7 +104,7 @@ f2b6e1eea261        centos7/nginx       "nginx '-g daemon off"   3 seconds ago  
 
 ##Access the web server from the browser by navigating to
 ```bash
-$localhost:80 
+$[http://localhost:80](http://localhost:80/) 
 ```
 
 #Installing nginx server by Docker-compose.
@@ -154,7 +154,7 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 
 Access the web server from the browser by navigating to
 ```bash
-$localhost:80 
+$[http://localhost:80](http://localhost:80/) 
 ```
 
 
