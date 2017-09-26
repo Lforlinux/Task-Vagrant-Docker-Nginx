@@ -53,7 +53,8 @@ $bash repo-sync.sh
 $cd nginx-docker-master
 ```
 
-##Building our own docker image from a Dockerfile inorder to install nginx server
+##Building our own docker image from a Dockerfile inorder to install nginx server.
+
 ##Git repo [https://github.com/Lforlinux/nginx-docker](https://github.com/Lforlinux/nginx-docker/).
 
 #Dockerfile
@@ -106,7 +107,8 @@ f2b6e1eea261        centos7/nginx       "nginx '-g daemon off"   3 seconds ago  
 $localhost:80 
 ```
 
-#Installing nginx server by Docker-compose 
+#Installing nginx server by Docker-compose.
+
 ##Git repo [https://github.com/Lforlinux/nginx-docker-compose](https://github.com/Lforlinux/nginx-docker-compose/).
 
 #Stop the previous container
