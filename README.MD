@@ -1,7 +1,7 @@
 
-#Vagrant Virtual box creation
+#Vagrant Virtual box creation. 
 
-Download this Vagrantfile on $HOME folder
+Download this Vagrantfile on $HOME folder.
 
 ```bash
 $ Vagrant.configure("2") do |config|
@@ -54,6 +54,7 @@ $cd nginx-docker-master
 ```
 
 ##Building our own docker image from a Dockerfile inorder to install nginx server
+##Git repo [https://github.com/Lforlinux/nginx-docker](https://github.com/Lforlinux/nginx-docker/).
 
 #Dockerfile
 ```bash
@@ -106,6 +107,7 @@ $localhost:80
 ```
 
 #Installing nginx server by Docker-compose 
+##Git repo [https://github.com/Lforlinux/nginx-docker-compose](https://github.com/Lforlinux/nginx-docker-compose/).
 
 #Stop the previous container
 ```bash
