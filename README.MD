@@ -1,7 +1,7 @@
 
 # Vagrant Virtual box creation. 
 
-Download this Vagrantfile on $HOME folder.
+Download this Vagrantfile on $HOME folder. Same can be found on [Vagrant cloud](https://app.vagrantup.com/lekshmin/boxes/centos7-docker) 
 
 ```bash
 $ Vagrant.configure("2") do |config|
